@@ -14,6 +14,8 @@
 #define IPHONE_4_NAMESTRING             @"iPhone 4" 
 #define IPHONE_4S_NAMESTRING            @"iPhone 4S"
 #define IPHONE_5_NAMESTRING             @"iPhone 5"
+#define IPHONE_5c_NAMESTRING            @"iPhone 5c"
+#define IPHONE_5s_NAMESTRING            @"iPhone 5s"
 #define IPHONE_UNKNOWN_NAMESTRING       @"Unknown iPhone"
 
 #define IPOD_1G_NAMESTRING              @"iPod touch 1G"
@@ -56,6 +58,8 @@ typedef enum {
     UIDevice4iPhone,
     UIDevice4SiPhone,
     UIDevice5iPhone,
+	UIDevice5ciPhone,
+	UIDevice5siPhone,
     
     UIDevice1GiPod,
     UIDevice2GiPod,
