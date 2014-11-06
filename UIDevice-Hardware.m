@@ -218,6 +218,9 @@
     if ([platform hasPrefix:@"iPad4"])
 	{
 		NSInteger submodel = [ UIDevice getSubmodel:platform ];
+		if ( submodel == 7 || submodel == 8 ) {
+			return UIDeviceiPadMini3;
+		}
         if ( submodel <= 3 )
         {
             return UIDeviceAiriPad;
@@ -226,7 +229,14 @@
             return UIDevice2GiPadMini;
         }
 	}
-    
+	if ([platform hasPrefix:@"iPad5"])
+	{
+		NSInteger submodel = [ UIDevice getSubmodel:platform ];
+		if ( submodel == 3 || submodel == 4 ) {
+			return UIDeviceiPadAir2;
+		}
+	}
+	
     // Apple TV
     if ([platform hasPrefix:@"AppleTV2"])           return UIDeviceAppleTV2;
     if ([platform hasPrefix:@"AppleTV3"])           return UIDeviceAppleTV3;
@@ -274,10 +284,12 @@
         case UIDevice3GiPad : return IPAD_3G_NAMESTRING;
         case UIDevice4GiPad : return IPAD_4G_NAMESTRING;
 		case UIDeviceAiriPad : return IPAD_AIR_NAMESTRING;
+		case UIDeviceiPadAir2 : return IPAD_AIR_2;
         case UIDeviceUnknowniPad : return IPAD_UNKNOWN_NAMESTRING;
             
         case UIDevice1GiPadMini : return IPAD_MINI_1G_NAMESTRING;
 		case UIDevice2GiPadMini : return IPAD_MINI_2G_NAMESTRING;
+		case UIDeviceiPadMini3  : return IPAD_MINI_3_NAMESTRING;
             
         case UIDeviceAppleTV2 : return APPLETV_2G_NAMESTRING;
         case UIDeviceAppleTV3 : return APPLETV_3G_NAMESTRING;
