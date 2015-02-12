@@ -218,7 +218,7 @@
     if ([platform hasPrefix:@"iPad4"])
 	{
 		NSInteger submodel = [ UIDevice getSubmodel:platform ];
-		if ( submodel == 7 || submodel == 8 ) {
+		if ( submodel == 7 || submodel == 8 || submodel == 9) {
 			return UIDeviceiPadMini3;
 		}
         if ( submodel <= 3 )
